@@ -1,0 +1,933 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Manufacturing+Consent&family=Moulpali&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Manufacturing+Consent&family=Moul&family=Moulpali&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Taprom&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Khmer", serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("images/bg.jpg") center/cover no-repeat;
+  position: relative;
+  color: #b89b63;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 15px;
+  position: relative;
+  z-index: 1;
+}
+/* TOP SOUND BUTTON */
+.sound-top {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+#soundToggle {
+  border: none;
+  background: rgba(214,185,140,0.9);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Couple */
+.home {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 30px 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.person {
+  text-align: center;
+  max-width: 200px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.person img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #b89b63;
+}
+
+.person h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.person p {
+  font-size: 14px;
+  margin-top: 8px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Wedding Text */
+.wedding-text {
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.wedding-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wedding-text p {
+  font-size: 16px;
+  line-height: 1.8;
+   font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 15px;
+  left: 100%;
+  transform: translateX(-50%);
+  background: #fff;
+  display: flex;
+  gap: 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #b89b63;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav a.active {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .couple {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+
+/* White overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+/* Invitation Section */
+.welcome {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px 100px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  
+}
+
+/* Paragraph text */
+.text {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 30px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px 100px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.main-title {
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Parents */
+.parents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parents p {
+  line-height: 1.8;
+}
+
+/* Invitation text */
+.invite-text {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+/* Couple */
+.couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.couple h2 {
+  font-size: 22px;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.heart {
+  font-size: 28px;
+}
+
+/* Event */
+.event {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parents {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .couple {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-title {
+    font-size: 26px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invite-text,
+  .event {
+    font-size: 16px;
+  }
+}
+
+/* White overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* Event Section */
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 120px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Event Cards */
+.event-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.event-card i {
+  font-size: 22px;
+  color: #b08b55;
+  
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  display: flex;
+  gap: 18px;
+  padding: 12px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.bottom-nav a {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.bottom-nav i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.bottom-nav a.active {
+  color: #b08b55;
+}
+
+/* Animation */
+@keyframes zoomBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    max-width: 520px;
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* Section */
+.schedule {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Schedule Item */
+.item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #f3ede3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 26px;
+  color: #b89b63;
+}
+
+/* Content */
+.content h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .item {
+    padding: 18px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* Title */
+.events-title {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: #b49a6c;
+  font-weight: 600;
+}
+
+/* Background Section */
+.info {
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Content box */
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  color: #7a5a36;
+}
+
+/* Title */
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #8b6a3f;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+/* Form */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1.5px solid #c9a878;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form textarea {
+  resize: none;
+}
+
+/* Button */
+.form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #7a5a36;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: #5f4427;
+}
+
+/* Thank text */
+.thank {
+  margin-top: 25px;
+  font-size: 0.95rem;
+}
+
+/* Love text */
+.love {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #8b6a3f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+/* Section background */
+.location {
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* Content */
+.content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  color: #7a5a36;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b19563;
+  margin-bottom: 30px;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Address text */
+.address {
+  font-size: 1.05rem;
+  line-height: 2;
+  margin-bottom: 20px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Date text */
+.date {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Button */
+.map-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #d8cbb8;
+  color: #6b4f2a;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.map-btn:hover {
+  background: #c1ae96;
+}
+
+/* English text */
+.english {
+  margin-top: 35px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #8b6a3f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    padding: 25px 18px;
+  }
+
+  .address,
+  .date {
+    font-size: 0.95rem;
+  }
+}
+
+
+.timeline {
+  position: relative;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b") center/cover no-repeat;
+  padding: 60px 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeUp 0.6s ease both;
+}
+
+.icon {
+  min-width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #b59a6a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+}
+
+.content h3 {
+  font-size: 18px;
+  color: #8b6b3e;
+}
+
+.content p {
+  font-size: 16px;
+  color: #5a4a3a;
+  margin-top: 5px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  color: #b19563;
+  
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  
+}
+
+/* GALLERY */
+.gallery {
+  padding: 50px 20px;
+}
+
+.gallery-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* GIFT SECTION */
+.gift-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.gift-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.gift-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d14b6e;
+}
+
+.gift-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: #b19563;
+  font-family: "Taprom", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.qr-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  animation: floatQR 4s ease-in-out infinite;
+}
+
+.qr-box img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.qr-box h3 {
+  color: #7b1e3c;
+  margin-bottom: 5px;
+}
+
+.qr-box p {
+  font-size: 0.95rem;
+  color: #b19563;
+}
+
+/* QR FLOAT ANIMATION */
+@keyframes floatQR {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
