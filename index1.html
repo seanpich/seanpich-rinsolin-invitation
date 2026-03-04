@@ -33,7 +33,7 @@
   <!-- Home Section -->
   <section id="home" class="home section">
     <div class="person">
-      <img src="image/SeanPich.jpg" alt="Groom">
+      <img src="image/pich-8.jpg" alt="Groom">
       <h2>ស៊ាន ពេជ</h2>
       <p>កូនប្រុស</p>
       <p>លោក សាន​ គុណ </p>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="person">
-      <img src="image/Solin.jpg" alt="Bride">
+      <img src="image/pich-7.jpg" alt="Bride">
       <h2>រិន សុលីន</h2>
       <p>កូនស្រី</p>
       <p>លោក ង៉ែត ហេង</p>
@@ -152,7 +152,7 @@
   <main class="container">
 
     <h1 class="section-title">កម្មវិធីអាពាហ៍ពិពាហ៍</h1>
-    <p>នៅភូមិ ប្រជ្រាយ ឃុំ អង្គប្រសាទ ស្រុក គិរីវង់ ខេត្ត​ តាកែវ។</p>
+    <p>នៅភូមិ ព្រៃជើង ឃុំ គោកព្រេច ស្រុក គិរីវង់ ខេត្ត​​ តាកែវ។</p>
     <p>ថ្ងៃទី១ ត្រូវនឹង ថ្ងៃសុក្រ ទី ២៧ មីនា ឆ្នាំ២០២៦</p>
 
     <div class="event-card">
@@ -319,14 +319,49 @@
     <h1>រូបភាពស្និទ្ធស្នាល</h1>
     <p>Our Wedding Gallery</p>
   </header>
-    <div class="gallery-container">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 1">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 2">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 3">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 4">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 5">
-      <img src="Image/SeanPich.jpg" alt="Wedding Photo 6">
+    <div class="slider">
+  <div class="slides">
+
+    <div class="slide">
+      <img src="Image/pich-1.jpg">
     </div>
+
+    <div class="slide">
+      <img src="Image/pich-2.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="Image/pich-3.jpg">
+    </div>>
+
+    <div class="slide">
+      <img src="Image/pich-4.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="Image/pich-5.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="Image/pich-6.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="Image/pich-7.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="Image/pich-8.jpg">
+    </div>
+
+  </div>
+
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <div class="dots"></div>
+</div>
+
   </section>
     <!-- GIFT SECTION -->
 <section class="gift-section">
@@ -380,6 +415,62 @@
       
     }
   });
+  const slides = document.querySelector(".slides");
+const slide = document.querySelectorAll(".slide");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const dotsContainer = document.querySelector(".dots");
+
+let index = 0;
+let interval;
+
+// Create dots
+slide.forEach((_, i)=>{
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if(i===0) dot.classList.add("active");
+  dot.addEventListener("click", ()=>showSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(i){
+  index = i;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  dots.forEach(dot=>dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+function nextSlide(){
+  index = (index + 1) % slide.length;
+  showSlide(index);
+}
+
+function prevSlide(){
+  index = (index - 1 + slide.length) % slide.length;
+  showSlide(index);
+}
+
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
+
+// Auto Slide
+function startAutoSlide(){
+  interval = setInterval(nextSlide, 3000);
+}
+
+function stopAutoSlide(){
+  clearInterval(interval);
+}
+
+startAutoSlide();
+
+// Pause on hover
+document.querySelector(".slider").addEventListener("mouseenter", stopAutoSlide);
+document.querySelector(".slider").addEventListener("mouseleave", startAutoSlide);
+
 </script>
 
 
